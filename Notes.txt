@@ -1,0 +1,3 @@
+First, I will update this note section periodically.
+
+Team, I know it looks like I have a lot done, but not all of my programs work. I've been trying hard to figure them out. I am currently stuck, and have been racking my brain like crazy trying to figure out how in the world to get hibernate to work. I have never had luck getting this figured out.

@@ -1,2 +1,2 @@
-# CIT380
+# CIT360
 Object Oriented Software Development
