@@ -1,7 +1,17 @@
 Meta-Cognition Moments
 
-During the week I was studying about Threads, Runnables, and Executors. After finally getting this figured out, and while I was at work making some automation test cases with Selenium, I had the thought that I should use threads so I can run more than one test at time. I had no idea why I didn’t think I could run more than one at a time, but I never really thought about that before. It was a moment of realization that I can make my automation test cases even more efficient.
+During the week I was studying about Threads, Runnables, and Executors. After finally getting this figured out, and
+while I was at work making some automation test cases with Selenium, I had the thought that I should use threads so I
+can run more than one test at time. I had no idea why I didn’t think I could run more than one at a time, but I never
+really thought about that before. It was a moment of realization that I can make my automation test cases even more
+efficient.
 
-I got behind on paying tithing and was feeling frustrated about how to catch up. I had enough money to make to catch up on it, but it also meant that we would be pretty strapped on cash. We also ran out of work to do at work, so we were on hold waiting for another project, and until then, we couldn’t work. I read in the scriptures to just have faith and trust that everything will work out. It was tough, but I did it. Blessing immediately flowed, and I learned that tithing is much more a principle of faith and obedience that it is that the church needs our 10%.
+I got behind on paying tithing and was feeling frustrated about how to catch up. I had enough money to make to catch up
+on it, but it also meant that we would be pretty strapped on cash. We also ran out of work to do at work, so we were on
+hold waiting for another project, and until then, we couldn’t work. I read in the scriptures to just have faith and
+trust that everything will work out. It was tough, but I did it. Blessing immediately flowed, and I learned that tithing
+is much more a principle of faith and obedience that it is that the church needs our 10%.
 
-I’ve made some automation to test lds.org with a test account. I’ve been trying to find a suitable and secure way to get login information. I had test account credentials in the code, but I finally realized that I can just make a prompt asking for a username and password instead of having it hard coded.
+I’ve made some automation to test lds.org with a test account. I’ve been trying to find a suitable and secure way to get
+ login information. I had test account credentials in the code, but I finally realized that I can just make a prompt
+ asking for a username and password instead of having it hard coded.

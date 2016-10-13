@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97587ef1-25f5-492a-8f57-73e397e0af2b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Sandbox/MVC/Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Sandbox/MVC/Handler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Sandbox/MVC/HibernateConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Sandbox/MVC/recipe.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Sandbox/MVC/recipeControl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Sandbox/MVC/recipeModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Sandbox/MVC/recipeView.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metacognitive/journal.txt" afterPath="$PROJECT_DIR$/metacognitive/journal.txt" />
     </list>
     <ignored path="Sandbox.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,8 +58,8 @@
       <file leaf-file-name="journal.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/metacognitive/journal.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="304" selection-start-line="6" selection-start-column="304" selection-end-line="6" selection-end-column="304" />
+            <state relative-caret-position="240">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -889,7 +882,7 @@
       <workItem from="1466618221871" duration="256000" />
       <workItem from="1475096666739" duration="2510000" />
       <workItem from="1475940149290" duration="519000" />
-      <workItem from="1476377136762" duration="86000" />
+      <workItem from="1476377136762" duration="214000" />
     </task>
     <servers />
   </component>
@@ -926,7 +919,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78644000" />
+    <option name="totallyTimeSpent" value="78772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -1283,8 +1276,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/metacognitive/journal.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="304" selection-start-line="6" selection-start-column="304" selection-end-line="6" selection-end-column="304" />
+        <state relative-caret-position="240">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
         </state>
       </provider>
