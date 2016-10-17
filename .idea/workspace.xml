@@ -7,7 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97587ef1-25f5-492a-8f57-73e397e0af2b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metacognitive/journal.txt" afterPath="$PROJECT_DIR$/metacognitive/journal.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JSON/JSONSandbox.java" afterPath="$PROJECT_DIR$/src/JSON/JSONSandbox.java" />
     </list>
     <ignored path="Sandbox.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,11 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="journal.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="journal.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/metacognitive/journal.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONSandbox.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/JSON/JSONSandbox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="814">
+              <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -116,8 +127,8 @@
         <option value="$PROJECT_DIR$/src/collections/lists.java" />
         <option value="$PROJECT_DIR$/src/collections/maps.java" />
         <option value="$PROJECT_DIR$/src/collections/Deadlocks.java" />
-        <option value="$PROJECT_DIR$/src/JSON/JSONSandbox.java" />
         <option value="$PROJECT_DIR$/metacognitive/journal.txt" />
+        <option value="$PROJECT_DIR$/src/JSON/JSONSandbox.java" />
       </list>
     </option>
   </component>
@@ -882,7 +893,8 @@
       <workItem from="1466618221871" duration="256000" />
       <workItem from="1475096666739" duration="2510000" />
       <workItem from="1475940149290" duration="519000" />
-      <workItem from="1476377136762" duration="214000" />
+      <workItem from="1476377136762" duration="351000" />
+      <workItem from="1476748215006" duration="37000" />
     </task>
     <servers />
   </component>
@@ -919,7 +931,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78772000" />
+    <option name="totallyTimeSpent" value="78946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -1223,13 +1235,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JSON/JSONSandbox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="69" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/junit/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1278,6 +1283,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JSON/JSONSandbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
           <folding />
         </state>
       </provider>

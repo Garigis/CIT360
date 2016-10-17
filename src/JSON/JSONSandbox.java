@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Created by colbycooley on 6/8/16.
+ * Created by colbycooley on 10/17/16.
  */
 public class JSONSandbox {
     public static void main(String[] args) {
@@ -100,8 +100,6 @@ public class JSONSandbox {
         } catch (JSONException e) {
             e.printStackTrace();
         } // this outputs a null
-
-        // nasty for parsing
-        // happy/nasty for json input output streams to a file
+        
     }
 }
