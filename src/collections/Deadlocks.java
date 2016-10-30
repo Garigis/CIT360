@@ -7,6 +7,10 @@ package collections;
 // Use runnables
 
 public class Deadlocks {
+
+    // This class shows what deadlocks are. A deadlock is when multiple threads get "locked" forever waiting for each
+    // other to finish.
+
     // Nasty for DeadLocks
     public static Object Lock1 = new Object();
     public static Object Lock2 = new Object();

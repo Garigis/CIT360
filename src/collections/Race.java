@@ -5,6 +5,10 @@ package collections;
  */
 public class Race {
 
+    // This creates a race condition. A Race condition is where 2 threads are using the same variables.
+    // This illustrates that because the counter below is supposed to stop at 1 million, but when ran it goes well
+    // above that number because thread1 and thread2 are sharing a counter.
+
     public static void main(String[] args) throws InterruptedException {
         MyCounter counter = new MyCounter();
 

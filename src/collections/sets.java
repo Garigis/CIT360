@@ -51,7 +51,7 @@ public class sets {
         }
         // nasty paths for duplicates, removing, adding
 
-        // Adding a blank collection to one that already is populated
+        // Nasty Path: Adding a blank collection to one that already is populated
         try {
             testset2.addAll(testset1);
             System.out.println("\n" + testset2);
@@ -60,7 +60,7 @@ public class sets {
             e.printStackTrace();
         }
 
-        // Adding duplicates, empty strings, and null
+        // Nasty Path: Adding duplicates, empty strings, and null
         try {
             testset2.add("X-Men");
             testset2.add("");
@@ -71,11 +71,46 @@ public class sets {
             ex.printStackTrace();
         }
 
-        // Delete item that could be a duplicate and indexes that don't exist
+        // Nasty Path: Delete item that could be a duplicate and indexes that don't exist
         try {
             testset2.remove("X-Men");
             testset2.remove(9);
             System.out.println("\n" + testset2);
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        // Nasty Path: adding a set to itself.
+        // This is a nasy path, because it is useless.
+        try {
+            testset1.addAll(testset1);
+            System.out.println("This worked");
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        // Nasty Path: remove all from a set. You should use remove all
+        try {
+            testset1.add("Harry Potter");
+            testset1.add("X-Men");
+            System.out.println("\n" + testset1);
+            testset1.remove(testset1);
+            System.out.println("This worked 2");
+            System.out.println("\n" + testset1);
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+            System.out.println("This failed");
+        }
+
+        // Happy Path: remove all from a set
+        try {
+            testset1.add("Harry Potter");
+            testset1.add("X-Men");
+            testset1.removeAll(testset1);
+            System.out.println("\n" + testset1);
         }
         catch (Exception ex) {
             ex.printStackTrace();

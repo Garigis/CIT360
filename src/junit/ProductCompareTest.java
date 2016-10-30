@@ -18,6 +18,7 @@ public class ProductCompareTest {
     Product one, two, three, four, five;
 
     @Before
+    // Adding Products from ProductCompare.java
     public void setUp() throws Exception {
         one = new Product("Thin Mints", 1.00, "Girl Scouts");
         two = new Product("Cookies", 1.25, "Wal-mart");
@@ -47,16 +48,19 @@ public class ProductCompareTest {
 
     @Test
     public void testNotEquals() {
+        // Tests whether aProductCompare and bProduct compare are the same, when first making new products.
         aProductCompare = new ProductCompare();
         bProductCompare = new ProductCompare();
         assertNotEquals(aProductCompare, bProductCompare);
 
+        // Sets cProductCompare to equal aProductCompare and tests to see if they are not the same.
         cProductCompare = aProductCompare;
         assertNotEquals(aProductCompare, cProductCompare);
     }
 
     @Test
     public void testTrue() {
+        // Adding items to aProductCompare, then testing the size of hashmap that there are > 0 items in it.
         aProductCompare = new ProductCompare();
         aProductCompare.addProduct(two);
         aProductCompare.addProduct(three);
@@ -70,6 +74,7 @@ public class ProductCompareTest {
 
     @Test
     public void testFalse() {
+        // Adding items to aProductCompare and using assertFalse
         aProductCompare = new ProductCompare();
         aProductCompare.addProduct(two);
         aProductCompare.addProduct(three);
