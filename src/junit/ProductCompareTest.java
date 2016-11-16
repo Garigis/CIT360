@@ -41,7 +41,6 @@ public class ProductCompareTest {
         aProductCompare.addProduct(four);
         numProducts = aProductCompare.ProductCompareSize();
         assertEquals(4, numProducts);
-
         // This is supposed to fail.
         assertEquals(3, numProducts);
     }
