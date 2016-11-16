@@ -22,11 +22,11 @@ public class AddServlet extends HttpServlet {
 
             // Us a hashmap to hold data from the client
             HashMap<String, Object> dataMap = (HashMap) inFromClient.readObject();
-            dataMap.put("model",this.theModel);
+            //dataMap.put("model",this.theModel);
             dataMap.put("toClient", outToClient);
 
             String aCommand = (String) dataMap.get("command");
-            theAppController.handleRequest(aCommand, dataMap);
+            //theAppController.handleRequest(aCommand, dataMap);
 
         } catch (Exception e) {
             e.printStackTrace();
