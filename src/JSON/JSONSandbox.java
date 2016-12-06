@@ -4,6 +4,10 @@ import beans.recipeBean;
 import org.quickconnectfamily.json.JSONException;
 import org.quickconnectfamily.json.JSONUtilities;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -12,19 +16,37 @@ import java.util.HashMap;
  */
 public class JSONSandbox {
     public static void main(String[] args) {
+
+
         // happy path 1 ------------------------------------------------------------------------------------------------
         // give the stringify class a correct object and prints it out
         System.out.println("Happy Path 1: ");
         recipeBean newBean = new recipeBean();
         newBean.setName("Toast");
         newBean.setDescription("Warm bread, mostly an excuse to eat butter.");
+        FileOutputStream fout = null;
+        try {
+            fout = new FileOutputStream("~/test.ser");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        ObjectOutputStream oos = null;
+        try {
+            oos = new ObjectOutputStream(fout);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         try {
             String jsonString = JSONUtilities.stringify(newBean);
             System.out.println(jsonString);
+            oos.writeObject(jsonString);
         } catch (JSONException e) {
             e.printStackTrace();
         } // this will output the object information in JSON format
-
+        catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
         // happy path 2 ------------------------------------------------------------------------------------------------

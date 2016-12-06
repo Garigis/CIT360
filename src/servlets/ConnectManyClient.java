@@ -19,7 +19,7 @@ public class ConnectManyClient {
         try {
 
             //Insert URL here.
-            URL url = new URL("");
+            URL url = new URL("https://www.google.com");
             HttpURLConnection connection = (HttpURLConnection)url.openConnection();
             JSONInputStream inFromServer = new JSONInputStream(connection.getInputStream());
             JSONOutputStream outToServer = new JSONOutputStream(connection.getOutputStream());
