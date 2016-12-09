@@ -8,9 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="97587ef1-25f5-492a-8f57-73e397e0af2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application_Controller/AppController.java" afterPath="$PROJECT_DIR$/src/Application_Controller/AppController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application_Controller/Dispatcher.java" afterPath="$PROJECT_DIR$/src/Application_Controller/Dispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application_Controller/ThirdPage.java" afterPath="$PROJECT_DIR$/src/Application_Controller/ThirdPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application_Controller/gladOs.java" afterPath="$PROJECT_DIR$/src/Application_Controller/gladOs.java" />
     </list>
     <ignored path="Sandbox.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,8 +90,8 @@
       <file leaf-file-name="AppController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Application_Controller/AppController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <state relative-caret-position="550">
+              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1045,7 +1042,7 @@
       <workItem from="1478664537994" duration="5333000" />
       <workItem from="1479862080516" duration="85000" />
       <workItem from="1481004279464" duration="1288000" />
-      <workItem from="1481257668874" duration="6727000" />
+      <workItem from="1481257668874" duration="6936000" />
     </task>
     <servers />
   </component>
@@ -1082,7 +1079,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97030000" />
+    <option name="totallyTimeSpent" value="97239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2174" y="23" width="1419" height="1023" extended-state="0" />
@@ -1488,8 +1485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application_Controller/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="550">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

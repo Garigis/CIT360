@@ -37,6 +37,8 @@ public class AppController extends Application_Controller.Dispatcher{
     public void dispatchRequest( String request ) throws InterruptedException {
         // log each request
         trackRequest(request);
-        dispatch(request);
+        if (isPageRequested()) {
+            dispatch(request);
+        }
     }
 }
