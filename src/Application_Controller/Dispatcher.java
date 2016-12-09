@@ -1,0 +1,31 @@
+package Application_Controller;
+
+/**
+ * Created by colbycooley on 12/8/16.
+ */
+public class Dispatcher {
+    private FirstPage  first;
+    private SecondPage second;
+    private ThirdPage  third;
+
+    public Dispatcher() {
+        first = new FirstPage();
+        second = new SecondPage();
+        third = new ThirdPage();
+    }
+
+    public void dispatch( String request ) throws InterruptedException {
+        if( request.equalsIgnoreCase("FIRST") )
+        {
+            first.show();
+        }
+        else if( request.equalsIgnoreCase("SECOND") )
+        {
+            second.show();
+        }
+        else
+        {
+            third.show();
+        }
+    }
+}

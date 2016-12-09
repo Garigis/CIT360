@@ -10,16 +10,13 @@ import org.hibernate.service.ServiceRegistryBuilder;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Created by colbycooley on 11/15/16.
  */
 public class Main {
     public static void main(String[] args) {
-
-
-        //The nastiest of paths
-
 
         //Try to use wrong password
         try {
@@ -42,8 +39,7 @@ public class Main {
             ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(config.getProperties()).buildServiceRegistry();
             sessionfactory = config.buildSessionFactory(serviceRegistry);
             main.showAllUsers(sessionfactory, "select u from User as u order by u.userId");
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -69,8 +65,7 @@ public class Main {
             ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(config.getProperties()).buildServiceRegistry();
             sessionfactory = config.buildSessionFactory(serviceRegistry);
             main.showAllUsers(sessionfactory, "select u from User as u order by u.userId");
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -96,8 +91,7 @@ public class Main {
             ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(config.getProperties()).buildServiceRegistry();
             sessionfactory = config.buildSessionFactory(serviceRegistry);
             main.showAllUsers(sessionfactory, "select u from User as u order by u.userId");
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -123,8 +117,7 @@ public class Main {
             ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(config.getProperties()).buildServiceRegistry();
             sessionfactory = config.buildSessionFactory(serviceRegistry);
             main.showAllUsers(sessionfactory, "select u from User as u order by u.userId");
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -150,8 +143,7 @@ public class Main {
             ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(config.getProperties()).buildServiceRegistry();
             sessionfactory = config.buildSessionFactory(serviceRegistry);
             main.showAllUsers(sessionfactory, "select u from User as u order by u.userId");
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -180,8 +172,7 @@ public class Main {
             sessionfactory = config.buildSessionFactory(serviceRegistry);
             //Here's bad SQL
             main.showAllUsers(sessionfactory, "select from u.userId u");
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -248,9 +239,7 @@ public class Main {
       *  The example has a User and a PhoneNumber class.
       */
 
-
             config.addAnnotatedClass(User.class);
-
 
 /*
 * There have been several changes to the Hibernate libraries.
@@ -263,14 +252,9 @@ public class Main {
 
             sessionfactory = config.buildSessionFactory(serviceRegistry);
             main.showAllUsers(sessionfactory, "select u from User as u order by u.userId");
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
-
     }
 
 
@@ -302,10 +286,141 @@ public class Main {
                 System.out.println(element.getFirstName());
             }
             transaction.commit();
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    // Creating Users
+    private static void createUser(SessionFactory factory) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        Session session = factory.getCurrentSession();
+
+        //create user happy path
+        User user1 = new User();
+        user1.setId(1);
+        user1.setFirstName("Colby");
+        user1.setLastName("Cooley");
+
+        //nasty path negative id
+        User user2 = new User();
+        user2.setId(-2);
+        user2.setFirstName("Jim");
+        user2.setLastName("Bob");
+
+        //nasty path duplicate id
+        User user3 = new User();
+        user3.setId(1);
+        user3.setFirstName("Brent");
+        user3.setLastName("Walker");
+
+        //create users to delete
+        User user4 = new User();
+        user3.setId(4);
+        user3.setFirstName("Zach");
+        user3.setLastName("Tanner");
+
+        User user5 = new User();
+        user3.setId(5);
+        user3.setFirstName("Hal");
+        user3.setLastName("Hauk");
+
+        //create transaction
+        session.beginTransaction();
+
+        //save user objects to be committed to the database
+        session.save(user1);
+
+        try{
+            //nasty path: negative id
+            session.save(user2);
+        }
+        catch(Exception ex){
+            System.out.println("Error, cannot create object with negative id");
+        }
+
+        try{
+            session.save(user3);
+        }
+        catch (Exception ex){
+            System.out.println("Error, can't create object with duplicate id");
+        }
+
+        session.save(user4);
+        session.save(user5);
+
+        //Need to commit and close transaction
+        session.getTransaction().commit();
+
+        /* Retrieving object from database
+		*  To retrieve an object from the database you retrieve it by it's id
+		*/
+
+        //Get a new session and start a transaction
+        session = factory.getCurrentSession();
+        session.beginTransaction();
+
+        //Happy Path
+        //retrieve student based on the id: primary key arguments are the class and the object id
+        System.out.println("-------------------------------------------------------------------------------------------------");
+        System.out.println("Retrieving object with user id of " + user1.getId());
+        User user = (User) session.get(User.class, user1.getId());
+
+        //Print out object retrieved from the database in java
+        System.out.println(user);
+        System.out.println("--------------------------------------------------------------------------------------------------");
+
+        try{
+            //nasty path: Retrieving wrong primary key from object that does not exist
+            System.out.println("Retrieving another object with customer id of 74");
+            User testUser = (User) session.get(User.class, 74);
+            System.out.println(testUser);
+            System.out.println("--------------------------------------------------------------------------------------------------");
+        }
+        catch(Exception ex){
+            System.out.println("Error, customer id does not exist in database");
+        }
+
+        //commit the transaction
+        session.getTransaction().commit();
+
+        //Update object
+
+        //Get a new session and start a transaction
+        session = factory.getCurrentSession();
+        session.beginTransaction();
+
+        //declare variable to hold a customer id number
+        int userId = 1;
+
+        //Happy Path: retrieve the object you want to update
+        User nextUser = (User) session.get(User.class, userId);
+        System.out.println("update: " + nextUser);
+
+        //Happy Path: Use your setter in your object to update the first name
+        nextUser.setFirstName("UPDATED");
+
+        //Happy Path: commit the transaction: Once commited the firstname with its updated value
+        //saved in memory commits to the database
+        session.getTransaction().commit();
+
+
+        //Deleting Objects
+
+        //Get a new session and start a transaction
+        session = factory.getCurrentSession();
+        session.beginTransaction();
+
+        //Happy Path: retrieve object for deletion
+        User delUser4 = (User) session.get(User.class, 4);
+
+        //Happy Path: delete object with id of 1
+        System.out.println("Deleting Customer " + delUser4);
+        session.delete(delUser4);
+
+        //Commit deletion
+        session.getTransaction().commit();
+    }
 }
