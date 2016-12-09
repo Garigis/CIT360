@@ -2,15 +2,24 @@ package Application_Controller;
 
 import sun.rmi.server.Dispatcher;
 
+import java.io.IOException;
+import java.rmi.Remote;
+import java.rmi.server.RemoteCall;
+
 /**
  * Created by colbycooley on 12/8/16.
  */
-public class AppController {
+public class AppController extends Application_Controller.Dispatcher{
     private Dispatcher dispatcher;
 
     public AppController()
     {
-        dispatcher = new Dispatcher();
+        dispatcher = new Dispatcher() {
+            @Override
+            public void dispatch(Remote remote, RemoteCall remoteCall) throws IOException {
+
+            }
+        };
     }
 
     private boolean isPageRequested()
@@ -28,9 +37,6 @@ public class AppController {
     public void dispatchRequest( String request ) throws InterruptedException {
         // log each request
         trackRequest(request);
-        // authenticate the user
-        if( isPageRequested() ) {
-            dispatcher.dispatch(request);
-        }
+        dispatch(request);
     }
 }

@@ -14,7 +14,7 @@ public class Dispatcher {
         third = new ThirdPage();
     }
 
-    public void dispatch( String request ) throws InterruptedException {
+    public void dispatch(String request) throws InterruptedException {
         if( request.equalsIgnoreCase("FIRST") )
         {
             first.show();

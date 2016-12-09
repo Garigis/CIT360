@@ -8,7 +8,7 @@ public class ThirdPage {
         System.out.println("Displaying Third Page");
         System.out.println();
 
-        gladOs glad = new gladOs();
+        GladOs glad = new GladOs();
 
         Thread Gladosthread = new Thread(glad);
 
