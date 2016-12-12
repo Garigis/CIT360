@@ -29,6 +29,10 @@ public class Main {
 
         // Display what is in model. (with updated candy info)
         controller.updateView();
+
+        // Uses nastypaths
+        controller.nastypath1();
+        controller.nastypath2();
     }
 
     // Initial model

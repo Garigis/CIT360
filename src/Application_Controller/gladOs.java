@@ -3,7 +3,7 @@ package Application_Controller;
 /**
  * Created by colbycooley on 12/8/16.
  */
-public class GladOs implements Runnable {
+class GladOs implements Runnable {
     // This is a song from the game Portal.
     public void singSong(){
         System.out.println("This was a triumph!\n" +
