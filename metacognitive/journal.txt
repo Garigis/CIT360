@@ -10,8 +10,37 @@ I got behind on paying tithing and was feeling frustrated about how to catch up.
 on it, but it also meant that we would be pretty strapped on cash. We also ran out of work to do at work, so we were on
 hold waiting for another project, and until then, we couldn’t work. I read in the scriptures to just have faith and
 trust that everything will work out. It was tough, but I did it. Blessing immediately flowed, and I learned that tithing
-is much more a principle of faith and obedience that it is that the church needs our 10%.
+is much more a principle of faith and obedience than it is about the church needing our 10%.
 
 I’ve made some automation to test lds.org with a test account. I’ve been trying to find a suitable and secure way to get
- login information. I had test account credentials in the code, but I finally realized that I can just make a prompt
- asking for a username and password instead of having it hard coded.
+login information. I had test account credentials in the code, but I finally realized that I can just make a prompt
+asking for a username and password instead of having it hard coded.
+
+I've been working with a math guy doing Quality Assurance. I've thought QA was a rather simple thing and literally
+anyone can do it. I'm partially right. Anyone can do QA, but not anyone can do it well. The math guy I've been working
+with is very good at analyzing, and seems to be very good at noticing flaws and bugs in the things we have tested
+together (I'm training him), but the front-end guy that wanted to learn seemed to miss a lot of things, and only ever
+use the test case that a particular card is for. This taught me that QA is a lot more about creativity and questioning
+than it is about simply seeing if a feature worked or not.
+
+Something that I found to be interesting is when you are using an app, the makers of the app follow MVC, and do their
+best to make it so they only take very specific information from a user. Data all comes from within the app except
+when you are prompted with a name, email addresss, and that sort of thing. This helps ensure that a user won't crash or
+break the app with bogus data, or data in the wrong place. The reason I find this cool is because while I was trying
+to learn MVC I thought it was a total waste of time to separate out code. It seemed like more work than it was worth
+and you can prompt users for anything you need. This goes to create very long files that are very hard to read and even
+harder to find errors in because it's probably overfull with them.
+
+I always new having a child would be hard. I also knew it meant I would probably be up a lot of the night trying to take
+care of the child. Now that my child is here, what I expected vs reality is a lot different. The child takes way more
+work that I imagined, simply from wanting to be held all the time during the day to wanting to play all through the
+night. If we don't play with her at night she gets really fussy and cries a lot, then we struggle with calming her down
+and trying to get her back to sleep. All that being said, I am still very happy to have a child and I still think these
+struggles are worth it. One day soon enough she will start smiling and do more than eat, sleep, and make messy diapers
+while demanding to be held.
+
+This entire semester has been very stressful for me by taking a more-than-normal amount of classes and having a child.
+I lost a lot of motivation to try finishing this class, but my friend and team member Casey really helped by offering
+encouragement and giving me some tips on what to watch and where to look to learn about our coding topics. I believe
+this is an added blessing my Patriarchal Blessing states: "People will be brought into your life, and they won't be
+brought by chance."
